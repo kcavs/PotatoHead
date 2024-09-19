@@ -1,3 +1,4 @@
+import java.util.*;
 public class PotatoHead{
     private boolean mustache;
     private int earrings;
@@ -39,8 +40,30 @@ public class PotatoHead{
     public void setnoseShape(String n){
         noseShape=n;
     }
+    public void talk(){
+        System.out.println("superb");
+    }
+    public int ski(){
+        int miles=1;
+        miles+=1;
+        return miles;
+    }
+    public boolean lieDetect(){
+        Scanner input=new Scanner(System.in);
+        System.out.println("tell a truth or lie about yourself: ");
+        String x=input.nextLine();
+        double y=Math.random();
+        boolean tf = false;
+        if(y>=0.5){
+            tf=true;
+        }
+        if(y<=0.4){
+            tf=false;
+        }
+        return tf;
+    }
     public String toString(){
-        return this.earrings+" is the ammount of earrings i have. i have a mustache: "+this.mustache+" this is my nose shape "+this.noseShape+" my shoes are "+this.shoeColor;
+        return "i have a mustache: "+this.mustache;
     }
     public static void main(String[]args){
         PotatoHead kash= new PotatoHead();
@@ -49,5 +72,8 @@ public class PotatoHead{
         kash.setshoeColor("red");
         System.out.println(kash.toString());
         System.out.println(delia.toString());
+        kash.talk();
+        kash.ski();
+        delia.lieDetect();
     }
 }
